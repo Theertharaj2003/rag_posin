@@ -1,0 +1,22 @@
+[
+  {
+    "id": "q1",
+    "question": "What is retrieval augmented generation?",
+    "answer": "RAG combines retrieval of external evidence with language-model generation."
+  },
+  {
+    "id": "q2",
+    "question": "What is knowledge poisoning in RAG?",
+    "answer": "Knowledge poisoning inserts malicious or misleading content into the retrieval corpus to manipulate generated answers."
+  },
+  {
+    "id": "q3",
+    "question": "How can a self-healing RAG system recover from suspicious evidence?",
+    "answer": "It can quarantine suspicious evidence, retrieve alternatives, verify them, and regenerate the answer."
+  },
+  {
+    "id": "q4",
+    "question": "What signals can be used in a trust score?",
+    "answer": "Relevance, source reliability, cross-source consistency, evidence support, and poisoning risk can contribute to trust."
+  }
+]

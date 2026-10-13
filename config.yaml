@@ -1,0 +1,47 @@
+project:
+  name: trust_aware_self_healing_rag
+  seed: 42
+  top_k: 8
+  final_k: 4
+
+retrieval:
+  dense_weight: 0.60
+  bm25_weight: 0.40
+  rerank_enabled: true
+  rerank_top_k: 8
+  dense_model: BAAI/bge-base-en-v1.5
+  reranker_model: cross-encoder/ms-marco-MiniLM-L-6-v2
+
+poisoning:
+  risk_threshold: 0.58
+  contradiction_threshold: 0.70
+  injection_penalty: 0.35
+  quarantine_threshold: 0.72
+
+trust:
+  relevance_weight: 0.25
+  source_reliability_weight: 0.20
+  consistency_weight: 0.20
+  evidence_support_weight: 0.20
+  poison_risk_weight: 0.15
+
+verification:
+  nli_model: facebook/bart-large-mnli
+  entailment_threshold: 0.55
+  contradiction_threshold: 0.55
+
+healing:
+  max_rounds: 2
+  min_trusted_evidence: 2
+  exclude_quarantined: true
+
+models:
+  poison_classifier: microsoft/deberta-v3-base
+  generator: Qwen/Qwen2.5-7B-Instruct
+
+paths:
+  raw: data/raw
+  clean: data/clean
+  poisoned: data/poisoned
+  processed: data/processed
+  results: results

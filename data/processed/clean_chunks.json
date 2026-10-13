@@ -1,0 +1,57 @@
+[
+  {
+    "document_id": "doc_rag_001",
+    "chunk_id": "doc_rag_001_c1",
+    "text": "Retrieval-Augmented Generation combines a retrieval component with a language model. The retriever selects external evidence relevant to a user query, and the generator uses that evidence to formulate an answer. The retrieval corpus can be a collection of documents, web pages, or enterprise records.",
+    "source": "research_notes",
+    "title": "Retrieval-Augmented Generation Overview",
+    "is_poisoned": false,
+    "attack_type": "clean",
+    "source_reliability": 0.9,
+    "metadata": {}
+  },
+  {
+    "document_id": "doc_rag_002",
+    "chunk_id": "doc_rag_002_c1",
+    "text": "A typical RAG pipeline first converts documents into chunks and embeddings, stores them in a searchable index, retrieves candidate passages for a query, and supplies selected passages to a generator. Hybrid retrieval can combine lexical matching such as BM25 with semantic vector retrieval.",
+    "source": "research_notes",
+    "title": "RAG Retrieval and Generation",
+    "is_poisoned": false,
+    "attack_type": "clean",
+    "source_reliability": 0.9,
+    "metadata": {}
+  },
+  {
+    "document_id": "doc_trust_001",
+    "chunk_id": "doc_trust_001_c1",
+    "text": "Trust-aware RAG does not treat every retrieved passage as equally reliable. A trust score can combine query relevance, source reliability, agreement with other evidence, support for the claim, and estimated poisoning risk. Low-trust evidence can be down-ranked or quarantined.",
+    "source": "research_notes",
+    "title": "Evidence Trust in RAG",
+    "is_poisoned": false,
+    "attack_type": "clean",
+    "source_reliability": 0.88,
+    "metadata": {}
+  },
+  {
+    "document_id": "doc_security_001",
+    "chunk_id": "doc_security_001_c1",
+    "text": "Knowledge poisoning occurs when malicious or misleading content is inserted into a retrieval corpus so that a RAG system retrieves the manipulated evidence. A successful defense should detect suspicious evidence and avoid grounding an answer in it.",
+    "source": "security_notes",
+    "title": "Knowledge Poisoning",
+    "is_poisoned": false,
+    "attack_type": "clean",
+    "source_reliability": 0.92,
+    "metadata": {}
+  },
+  {
+    "document_id": "doc_healing_001",
+    "chunk_id": "doc_healing_001_c1",
+    "text": "A self-healing RAG workflow can quarantine suspicious passages, re-retrieve alternatives, verify the replacement evidence, and regenerate the answer. The system should expose uncertainty or abstain when adequate verified evidence is unavailable.",
+    "source": "research_notes",
+    "title": "Self-Healing Retrieval",
+    "is_poisoned": false,
+    "attack_type": "clean",
+    "source_reliability": 0.86,
+    "metadata": {}
+  }
+]
